@@ -1,12 +1,6 @@
 steps:
-  - name: ":node:"
-    command: "make test"
-    plugins:
-      - docker-compose#v2.5.1:
-          run: app  
-          config: docker-compose.yml
-  - name: "gatim :hammer:"
-    command: "npm run badger"
+  - name: ":node: Yarny"
+    command: yarn install --frozen-lockfile
     plugins:
       - docker-compose#v2.5.1:
           run: app  
