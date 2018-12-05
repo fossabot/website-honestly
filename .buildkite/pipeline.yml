@@ -1,6 +1,6 @@
 steps:
   - name: ":node: Yarny"
-    command: "test.sh"
+    command: "ls"
     plugins:
       - docker-compose#v2.5.1:
           run: app  
