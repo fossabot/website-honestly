@@ -1,8 +1,6 @@
 steps:
   - name: ":node: Yarny"
-    command: 
-      - sudo yarn install --frozen-lockfile
-      - make prettier
+    command: "test.sh"
     plugins:
       - docker-compose#v2.5.1:
           run: app  
