@@ -1,0 +1,7 @@
+steps:
+  - name: ":node:"
+    command: make test
+    plugins:
+      - docker-compose#v2.5.1:
+          run: app  
+          config: docker-compose.yml
