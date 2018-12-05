@@ -2,7 +2,10 @@ steps:
   - name: ":node: Yarny - doing up styles"
     command: 
       - "cd dev/"
-      - "ls"
+      - "yarn install --frozen-lockfile"
+      - "npm run badger"
+      - "make prettier"
+      - "make lint"
     plugins:
       - docker-compose#v2.5.1:
           run: app  
