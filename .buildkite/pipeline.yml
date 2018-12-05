@@ -1,6 +1,12 @@
 steps:
   - name: ":node:"
-    command: make test
+    command: "make test"
+    plugins:
+      - docker-compose#v2.5.1:
+          run: app  
+          config: docker-compose.yml
+  - name: "gatim :hammer:"
+    command: "npm run badger"
     plugins:
       - docker-compose#v2.5.1:
           run: app  
