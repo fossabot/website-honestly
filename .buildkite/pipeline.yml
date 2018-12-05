@@ -6,9 +6,8 @@ steps:
       - "make prettier"
       - "make lint"
       - "make flow"
-      - "/cc-test-reporter before-build"
-      - "make test-coverage"
-      - "cc-test-reporter after-build --exit-code 0"
+      - "test.sh"
+
     plugins:
       - docker-compose#v2.5.1:
           run: app  
