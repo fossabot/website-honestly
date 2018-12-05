@@ -2,7 +2,7 @@ steps:
   - name: ":node: Yarny - doing up styles"
     command: 
       - "yarn install --frozen-lockfile"
-      - "yarn global add prettier"
+      - "npm run badger"
       - "make prettier"
       - "make lint"
     plugins:
