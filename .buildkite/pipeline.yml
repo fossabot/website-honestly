@@ -6,7 +6,7 @@ steps:
       - "make prettier"
       - "make lint"
       - "make flow"
-      - "test.sh"
+      - "./test.sh"
 
     plugins:
       - docker-compose#v2.5.1:
