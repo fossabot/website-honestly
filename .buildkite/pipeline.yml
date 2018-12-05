@@ -1,6 +1,10 @@
 steps:
-  - name: ":node: Yarny"
-    command: "ls"
+  - name: ":node: Yarny - doing up styles"
+    command: 
+      - "yarn install --frozen-lockfile"
+      - "yarn global add prettier"
+      - "make prettier"
+      - "make lint"
     plugins:
       - docker-compose#v2.5.1:
           run: app  
