@@ -6,15 +6,6 @@ steps:
       - "make prettier"
       - "make lint"
       - "make flow"
-      - "sudo ./test.sh"
-
-    plugins:
-      - docker-compose#v2.5.1:
-          run: app  
-          config: docker-compose.yml
-  - name: "part 2 :hammer:"
-    command: 
-      - "ls"
     plugins:
       - docker-compose#v2.5.1:
           run: app  

@@ -18,3 +18,11 @@ RUN chmod +x ./cc-test-reporter
 
 RUN apk -v --purge del py-pip
 
+# Install yarn
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+RUN sudo apt-get update && sudo apt-get install yarn
+
+# Install the node version required for the site
+# RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
+#     && apt-get install -y nodejs
